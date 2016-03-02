@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "com.stellarin.pira.sharedata"
+        minSdkVersion 17
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile files('libs/org.apache.http.legacy.jar')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.0.1'
+    compile 'com.nanohttpd:nanohttpd:2.1.1'
+    compile 'com.android.support:design:23.0.1'
+    compile 'com.journeyapps:zxing-android-embedded:2.0.1@aar'
+    compile 'com.journeyapps:zxing-android-legacy:2.0.1@aar'
+    compile 'com.journeyapps:zxing-android-integration:2.0.1@aar'
+    compile 'com.google.zxing:core:3.0.1'
+    compile 'com.loopj.android:android-async-http:1.4.9'
+    compile 'com.nononsenseapps:filepicker:2.4.2'
+    compile 'com.github.jlmd:AnimatedCircleLoadingView:1.1.2@aar'
+    compile 'com.github.tibolte:elasticdownload:1.0.4'          
+    compile files('libs/zip4j_1.3.2.jar')
+    compile group: 'commons-io', name: 'commons-io', version: '2.0.1'
+    compile 'com.wang.avi:library:1.0.1'
+    compile 'com.nineoldandroids:library:2.4.0'
+
+
+
+
+
+}
+allprojects {
+    repositories {
+        jcenter()
+        maven {
+            url "http://dl.bintray.com/journeyapps/maven"
+
+        }
+        maven {
+            url "https://jitpack.io"
+
+        }
+        maven {
+            url "http://dl.bintray.com/jlmd/maven"
+
+        }
+
+    }
+}

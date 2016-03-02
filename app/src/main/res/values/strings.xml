@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">StellarShare</string>
+    <string name="title_activity_start_server">StellarShare</string>
+    <string name="hello">Hello</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="folder_name">Tempfolder</string>
+</resources>
